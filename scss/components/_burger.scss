@@ -1,0 +1,48 @@
+.header__burger {
+  cursor: pointer;
+  padding: 12px 0;
+  display: none;
+  background: transparent;
+  z-index: 10;
+  span {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    transition: all .3s ease;
+    background: var(--white-col);
+    border-radius: 30px;
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    &:before,
+    &:after {
+      position: absolute;
+      background: transparent;
+      content: "";
+      width: 25px;
+      height: 2px;
+      transition: all .3s ease;
+      background: var(--white-col);
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    &:before {
+      top: -8px;
+    }
+    &:after {
+      top: 8px;
+    }
+  }
+}
+.header__burger.active {
+  span {
+    background: transparent;
+    &:before {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+    &:after {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+  }
+}
