@@ -1,4 +1,4 @@
-.about {
+.structure {
   position: relative;
   margin: 40px 0;
 
@@ -21,7 +21,7 @@
     border-radius: 10px;
     overflow: hidden;
     height: 493px;
-    background: url('../images/about-img.jpeg') no-repeat;
+    background: url('../images/structure-img.jpeg') no-repeat;
     background-size: cover;
     background-position: center;
     &::before {
@@ -59,7 +59,7 @@
 }
 
 @media (max-width: 1100px) {
-  .about {
+  .structure {
     margin: 30px 0;
     &__body {
       flex-direction: column-reverse;
@@ -76,14 +76,14 @@
   }
 }
 @media (max-width: 768px) {
-  .about {
+  .structure {
     &__img {
       height: 360px;
     }
   }
 }
 @media (max-width: 600px) {
-  .about {
+  .structure {
     &__title {
       font-size: 1.6em;
     }
