@@ -1,0 +1,30 @@
+.header {
+  & .container {
+    padding: 30px 15px;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--white-col);
+  }
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+  &__link {
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: all .3s;
+    color: var(--white-col);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
