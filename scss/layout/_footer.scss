@@ -34,6 +34,8 @@
     border-radius: 20px;
     text-transform: uppercase;
     transition: color .3s ease, border .3s ease;
+    display: block;
+    white-space: nowrap;
     &:hover {
       color: var(--green-col);
       border: 1px solid var(--green-col);
@@ -49,16 +51,15 @@
     font-size: 0.9em;
   }
 }
-@media (max-width: 800px) {
-  .footer {
-    padding: 30px 0;
-    &__inner {
+@media (max-width: 900px) {
+   .footer {
+     &__inner {
       flex-direction: column;
       align-items: start;
       gap: 35px;
       padding-bottom: 30px;
-    }
-  }
+     }
+   }
 }
 @media (max-width: 768px) {
   .footer__description {

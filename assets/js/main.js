@@ -20,6 +20,12 @@ function toggle() {
       }
     });
 
+    nav.addEventListener('click', function(event) {
+      if (event.target === nav) {
+        closeNav();
+      }
+    });
+
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape' && nav.classList.contains('active')) {
         closeNav();
@@ -35,3 +41,4 @@ function toggle() {
 }
 
 toggle();
+
