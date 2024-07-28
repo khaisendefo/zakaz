@@ -3,15 +3,22 @@ function toggle() {
     const toggleButton = document.querySelector('.header__burger');
     const nav = document.querySelector('.header__nav');
     const navLinks = document.querySelectorAll('.header__link');
+    const body = document.body;
 
     function closeNav() {
       toggleButton.classList.remove('active');
       nav.classList.remove('active');
+      body.classList.remove('no-scroll');
     }
 
     toggleButton.addEventListener('click', function () {
-      toggleButton.classList.toggle('active');
+      const isActive = toggleButton.classList.toggle('active');
       nav.classList.toggle('active');
+      if (isActive) {
+        body.classList.add('no-scroll');
+      } else {
+        body.classList.remove('no-scroll');
+      }
     });
 
     document.addEventListener('click', function(event) {
